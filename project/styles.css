@@ -222,6 +222,7 @@ h3{
     cursor: pointer;
     border: 2px solid var(--bg-secondary) ;
     margin-bottom: 5rem;
+    min-width: 22rem;
 }
     /* MORE STYLING */
 th {
@@ -309,6 +310,7 @@ td:nth-child(3) {
         /* NAVIGATION LINKS */
     .nav-link {
         justify-content: center;
+        width: 4rem;
       }
         /* LOGO DISPLAY NONE BECAUSE NAVBAR TOO SMALL*/
     .logo {
@@ -340,6 +342,7 @@ td:nth-child(3) {
     #table-small{
         padding: 15px 15px;
         max-width: 20rem;
+        min-width: 22rem;
     }
         /* CHECKBOX FOR THE EXERCICES */
     .ex_check {

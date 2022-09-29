@@ -13,6 +13,7 @@
     --bg-general: #202124;
     --transition-speed: 300ms;
     display: inline-block;
+    box-sizing: border-box;
 }
 *{
     list-style-type: none;
@@ -106,10 +107,13 @@ a svg {
     /* NAVIGATION LINKS TEXTS*/
 .nav-link-text {
     display: none;
+    text-transform: capitalize;
     margin-left: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
     /* MAIN NOT OVERLAPPING THE NAVBAR */
@@ -156,20 +160,6 @@ main {
     cursor: pointer;
 }
 
-    /* TITLE OF THE WORKOUT CATEGORIES*/
-.program-title {
-    margin: 0px;
-    color: var(--text-primary);
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 5rem;
-    padding: 0;
-}
-.program-title:hover {
-    transition: var(--transition-speed);
-    filter: invert(50%) sepia(100%) saturate(1200000%) hue-rotate(0deg) brightness(119%) contrast(119%);
-}
-
     /* PROGRAM LIST */
 .program-list {
     text-align: center;
@@ -204,38 +194,34 @@ h3{
     font-size: 2rem;
 }
 
-    /* DIV CONTAINING THE HEADER OF THE TABLE */
-.header-table-block{
-    width: 100%;
-    background-color: var(--bg-primary-two);
-    padding-top: 1.5rem;
-
-}
     /* HEADER OF THE TABLE */
-.header-table{
-    margin: 0;
-    margin-left: 4rem;
+.header-title-2 {
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 3rem;
+    margin-top: 0px;
+    padding-top: 1.2rem;
     padding-bottom: 1rem;
-    width: 15rem;
-
+    width: 100%;
     color: var(--text-primary);
+    background-color: var(--bg-primary-two);
     text-transform: uppercase;
     text-align: center;
 }
-.header-table:hover {
-    filter: invert(50%) sepia(100%) saturate(1200000%) hue-rotate(0deg) brightness(119%) contrast(119%);
+.header-title-2:hover {
+    color: red;
     transition: var(--transition-speed);
 }
 
     /* TABLE STYLE */
 .table {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
     width: auto;
     cursor: pointer;
     border: 2px solid var(--bg-secondary) ;
+    margin-bottom: 5rem;
 }
     /* MORE STYLING */
 th {
@@ -253,21 +239,59 @@ th, td {
     font-size: 1rem;
     color: var(--text-secondary);
 }
-tbody tr, td, th{
+tbody tr, td, th {
     border: 1px solid var(--bg-primary);
 }
-td:nth-child(3){
+td:nth-child(3) {
     width: 35px;
 }
     /* CHECKBOX FOR THE EXERCICES */
-.ex_check{
+.ex_check {
     padding: 22px;
 }
 
     /* MORE CONTENT DIV */
-.more-content{
+.more-content {
     background-color: black;
 }
+
+
+    /* WARMUP STRETCH TIMER 
+      .timer {
+        font-family: sans-serif;
+        display: inline-block;
+        padding: 24px 32px;
+        border-radius: 30px;
+        background: white;
+      }
+      
+      .timer__part {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      
+      .timer__btn {
+        width: 50px;
+        height: 50px;
+        margin-left: 16px;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        background: #8208e6;
+        cursor: pointer;
+      }
+      
+      .timer__btn--start {
+        background: #00b84c;
+      }
+      
+      .timer__btn--stop {
+        background: #ff0256;
+      }
+      
+      */
+
+
 
     /* SMALL SCREENS @MEDIA QUERY*/
 @media only screen and (max-width: 600px) {
@@ -308,12 +332,22 @@ td:nth-child(3){
         /* TABLE CENTERED AND SPACE BETWEEN TABLES */
     .table{
         margin-bottom: 4rem;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 0rem;
     }
-    .header-table{
-        margin-bottom: 1rem;
-        text-align: center;
+    th, td {
+        padding: 10px 6px;
+    }
+    #table-small{
+        padding: 15px 15px;
+        max-width: 20rem;
+    }
+        /* CHECKBOX FOR THE EXERCICES */
+    .ex_check {
+        padding: 22px;
+    }
+        /* HEADER TITLE FONT SIZE */
+    .header-title{
+        font-size: 2rem;
     }
 }
 
@@ -330,16 +364,20 @@ td:nth-child(3){
         display: inline;
         transition: opacity var(--transition-speed);
     }
+
+    .navbar:hover .nav-link-display-block{
+        display: block;
+    }
         /* NAVIGATION HOVER*/
     .navbar:hover{
         width: 16rem;
     }
-
         /* BLOCK OF THE WORKOUT CATEGORIES */
     .program-block {
         width: 33.33%;
-        height: 100vh;
+        max-height: 5rem;
         float: left;
+        
     }
 
     .table-blocks {
@@ -348,9 +386,7 @@ td:nth-child(3){
         justify-content: center;
     }
 
-    .table-blocks .table-block {
-        align-items: center;
-    }
+
 
 }
 

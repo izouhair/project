@@ -1,0 +1,370 @@
+    /* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Kalam&display=swap');
+    
+:root{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Kalam', cursive;
+    font-size: 16px;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --bg-primary: #121212;
+    --bg-primary-two:#161616;
+    --bg-secondary: #ff0000;
+    --bg-general: #202124;
+    --transition-speed: 300ms;
+    display: inline-block;
+    box-sizing: border-box;
+}
+*{
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+body{
+    color: black;
+    background-color: var(--bg-general);
+    margin: 0;
+    padding: 0;
+}
+
+    /* SCROLLBAR */
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+    background: #000000;
+}
+body::-webkit-scrollbar-thumb{
+    background: #ffffff;
+}
+
+    /* NAVIGATION BAR */
+.navbar{
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width var(--transition-speed) ease ;
+}
+    /* NAVIGATION UL */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+    /* NAVIGATION ELEMENTS */
+.nav-element{
+    width: 100%;
+}
+.nav-element:last-child {
+    margin-top: auto;
+}
+    /* NAVIGATION LINKS */
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(1);
+    transition: var(--transition-speed);
+}
+.nav-link:hover {
+    filter: grayscale(0) opacity(0.8);
+    background-color: var(--bg-primary-two);
+    color: var(--text-secondary);
+}
+    /* NAVIGATION LOGO*/
+.logo {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-primary-two);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+    /* NAVIGATION ICONS */
+a svg {
+    filter: invert(50%) sepia(100%) saturate(1200000%) hue-rotate(0deg) brightness(119%) contrast(119%);
+}
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed)
+}
+.navbar:hover .logo svg {
+    transform: rotate(-180deg)
+}
+.nav-link svg {
+    height: 3rem;
+    min-width: 3rem;
+    margin: 0 1rem;
+}
+    /* NAVIGATION LINKS TEXTS*/
+.nav-link-text {
+    display: none;
+    text-transform: capitalize;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+    /* MAIN NOT OVERLAPPING THE NAVBAR */
+main {
+    margin-left: 5rem;
+}
+
+    /* BLOCK OF PAGE TITLE HEADER */
+.page-title-block {
+    width: 100%;
+    background-color: var(--bg-general);
+    height: 5rem;
+}
+    /* PAGE TITLE HEADER */
+.header-title {
+    margin: 0;
+    margin-top: 1rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 0.2ch;
+    padding-top: 6.5px;
+    cursor: pointer;
+}
+
+    /* BLOCK OF THE PAGE DESCRIPTION */
+.page-description-block {
+    width: 100%;
+    height: 1.75rem;
+    margin-bottom: 3rem;
+    background-color: var(--bg-primary);
+    padding: 0px;
+}
+    /* PAGE DESCRIPTION */
+.page-description {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    letter-spacing: 0.1ch;
+    font-style: italic;
+    margin: 0;
+    margin-left: 13rem;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+    /* PROGRAM LIST */
+.program-list {
+    text-align: center;
+    padding: 0;
+}
+    /* PROGRAM ELEMENTS OF THE LIST */
+.program-element {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+    /* PROGRAM LINK OF THE LIST */
+.program-link {
+    padding: 1.3rem 3rem;
+    padding-bottom: 1.5rem;
+    border:rgba(255, 0, 0, 0.3) solid 3px;
+    background-color: var(--bg-primary);
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-top: 5rem;
+}
+.program-link:hover {
+    filter: grayscale(0) opacity(0.9);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    border:var(--bg-secondary) solid 2px;
+    transition: var(--transition-speed);
+    padding: 1.5rem 3.2rem;
+    padding-bottom: 1.7rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+    /* HEADER OF THE TABLE */
+.header-title-2 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
+    margin-top: 0px;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    color: var(--text-primary);
+    background-color: var(--bg-primary-two);
+    text-transform: uppercase;
+    text-align: center;
+}
+.header-title-2:hover {
+    color: red;
+    transition: var(--transition-speed);
+}
+
+    /* TABLE STYLE */
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: auto;
+    cursor: pointer;
+    border: 2px solid var(--bg-secondary) ;
+    margin-bottom: 5rem;
+    min-width: 22rem;
+}
+    /* MORE STYLING */
+th {
+    text-transform:uppercase;
+    background-color: var(--bg-general);
+    color: var(--text-secondary);
+    text-align: left;
+}
+td {
+    background-color: var(--bg-general);
+    text-transform: capitalize;
+}
+th, td {
+    padding: 15px 15px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+tbody tr, td, th {
+    border: 1px solid var(--bg-primary);
+}
+td:nth-child(3) {
+    width: 35px;
+}
+    /* CHECKBOX FOR THE EXERCICES */
+.ex_check {
+    padding: 22px;
+}
+
+    /* MORE CONTENT DIV */
+.more-content {
+    background-color: black;
+}
+    /* YOUTUBE TIMER */
+.youtube-link {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35rem;
+    margin-bottom: 4rem;
+}
+
+
+    /* SMALL SCREENS @MEDIA QUERY*/
+@media only screen and (max-width: 600px) {
+
+        /* NAVBAR SET ON THE OTHER AXIS*/
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+        /* NAVIGATION UL */
+    .nav-list {
+        flex-direction: row;
+    }
+        /* NAVIGATION LINKS */
+    .nav-link {
+        justify-content: center;
+        width: 4rem;
+      }
+        /* LOGO DISPLAY NONE BECAUSE NAVBAR TOO SMALL*/
+    .logo {
+        display: none;
+    }
+
+        /* MAIN WITH MARGIN 0 BECAUSE NAVBAR IS NO LONGER ON ON THE LEFT */    
+    main {
+        margin: 0;
+    }
+    
+        /* PAGE DESCRIPTION LEFT MARGIN REDUCED BECAUSE WE HAVE MORE SPACE AT THE LEFT */
+    .page-description {
+        margin-left: 1rem
+    }
+        /* PROGRAM BLOCK IS NO LONGER SPLIT INTO 3 INLINE BLOCKS*/
+    .program-block {
+        width: 100%;
+    }
+
+        /* TABLE CENTERED AND SPACE BETWEEN TABLES */
+    .table{
+        margin-bottom: 4rem;
+        max-width: 0rem;
+    }
+    th, td {
+        padding: 10px 6px;
+    }
+    #table-small{
+        padding: 15px 15px;
+        max-width: 20rem;
+        min-width: 22rem;
+    }
+        /* CHECKBOX FOR THE EXERCICES */
+    .ex_check {
+        padding: 22px;
+    }
+        /* HEADER TITLE FONT SIZE */
+    .header-title{
+        font-size: 2rem;
+    }
+        /* YOUTUBE TIMER */
+    .timer-youtube {
+        max-width: 22rem;
+}
+}
+
+    /* LARGE SCREENS @MEDIA QUERY*/
+@media only screen and (min-width: 600px) {
+
+        /* NAVIGATION BAR */
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover .nav-link-text{
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+
+    .navbar:hover .nav-link-display-block{
+        display: block;
+    }
+        /* NAVIGATION HOVER*/
+    .navbar:hover{
+        width: 16rem;
+    }
+        /* BLOCK OF THE WORKOUT CATEGORIES */
+    .program-block {
+        width: 33.33%;
+        max-height: 5rem;
+        float: left;
+        
+    }
+
+    .table-blocks {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+
+
+}
+
